@@ -12,8 +12,7 @@ public class TilemapController : Singleton<TilemapController>
     public TileBase[] floorTiles;
     public TileBase[] goalTiles;
     public TileBase[] boxTiles;
-    public TileBase[] doorTiles;
-    public TileBase[] startLocationTiles;
+    public TileBase[] ladderTiles;
 
     [System.Serializable]
     public enum BackgroundTileType
@@ -26,8 +25,7 @@ public class TilemapController : Singleton<TilemapController>
     public enum ItemsTileType
     {
         BOX,
-        DOOR,
-        START_LOCATION,
+        LADDER,
         GOAL,
         NONE
     };
@@ -60,13 +58,9 @@ public class TilemapController : Singleton<TilemapController>
         {
             if (tile == t) return ItemsTileType.BOX;
         }
-        foreach (TileBase t in startLocationTiles)
+        foreach (TileBase t in ladderTiles)
         {
-            if (tile == t) return ItemsTileType.START_LOCATION;
-        }
-        foreach (TileBase t in doorTiles)
-        {
-            if (tile == t) return ItemsTileType.DOOR;
+            if (tile == t) return ItemsTileType.LADDER;
         }
 
         return ItemsTileType.NONE;
@@ -111,13 +105,8 @@ public class TilemapController : Singleton<TilemapController>
                     LevelController.Instance.OnGoalReached();
                 }
             }
-            // the player is moving into a door
-            else if (nextTileItem == ItemsTileType.DOOR)
-            {
-                // TODO: open or close the door
-            }
             // the player is moving into the start location
-            else if (nextTileItem == ItemsTileType.START_LOCATION)
+            else if (nextTileItem == ItemsTileType.LADDER)
             {
                 if (!isShadow)
                 {
