@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // LevelController is responsible for the overall flow of the game. It will
 // handle things like pausing, moving between scenes, ending and beginning levels, etc.
@@ -18,6 +19,10 @@ public class LevelController : Singleton<LevelController>
     };
 
     public GamePhase phase { get; private set; }
+
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    public GameObject pauseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -42,8 +47,11 @@ public class LevelController : Singleton<LevelController>
     {
         Debug.Log("Beginning Phase 2");
         phase = GamePhase.PHASE2;
+
         // enable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);
+
+        Player.Instance.Phase2Begin();
         // TODO: stop playing phase 1 music, play phase 2 music
         // TODO: play phase 2 begin sound?
         // TODO: 
@@ -65,6 +73,7 @@ public class LevelController : Singleton<LevelController>
         if (phase == GamePhase.PHASE2)
         {
             Debug.Log("You win!");
+            winScreen.SetActive(true);
         }
     }
 
@@ -72,6 +81,7 @@ public class LevelController : Singleton<LevelController>
     public void OnPlayerDied()
     {
         Debug.Log("You lose!");
+        loseScreen.SetActive(true);
     }
 
     // Called when the player moves in the game
@@ -87,6 +97,7 @@ public class LevelController : Singleton<LevelController>
     // resets the current level to the default state
     public void ResetLevel()
     {
-        // TODO: add implementation 
+        // TODO: add implementation
+        SceneTransitionManager.Instance.TransitionToScene(SceneManager.GetActiveScene().name);
     }
 }

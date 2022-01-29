@@ -76,7 +76,7 @@ public class TilemapController : Singleton<TilemapController>
     // Given a current player position, and a movement vector returns the direction
     // that the player moves to, given the constraints of the map. The player will
     // NOT intersect with walls
-    public Vector3 MovePlayer(Vector3Int playerLocation, Vector3Int movement)
+    public Vector3 MovePlayer(Vector3Int playerLocation, Vector3Int movement, bool isShadow)
     {
         BackgroundTileType nextTileBG = GetBackgroundTile(playerLocation + movement);
         ItemsTileType nextTileItem = GetItemsTile(playerLocation + movement);
@@ -95,7 +95,7 @@ public class TilemapController : Singleton<TilemapController>
             // the player is moving into a box
             if (nextTileItem == ItemsTileType.BOX)
             {
-                Vector3 nextMovement = MovePlayer(playerLocation + movement, movement);
+                Vector3 nextMovement = MovePlayer(playerLocation + movement, movement, isShadow);
                 // TODO: move the box
                 return nextMovement;
             }
@@ -103,7 +103,10 @@ public class TilemapController : Singleton<TilemapController>
             // the player is moving into a goal
             if (nextTileItem == ItemsTileType.GOAL)
             {
-                LevelController.Instance.OnGoalReached();
+                if (!isShadow)
+                {
+                    LevelController.Instance.OnGoalReached();
+                }
             }
             // the player is moving into a door
             else if (nextTileItem == ItemsTileType.DOOR)
@@ -113,7 +116,10 @@ public class TilemapController : Singleton<TilemapController>
             // the player is moving into the start location
             else if (nextTileItem == ItemsTileType.START_LOCATION)
             {
-                LevelController.Instance.OnStartLocationReached();
+                if (!isShadow)
+                {
+                    LevelController.Instance.OnStartLocationReached();
+                }
             }
 
             return  movement;
