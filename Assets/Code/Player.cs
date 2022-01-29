@@ -23,6 +23,7 @@ public class Player : Singleton<Player>
         {
             LevelController.Instance.OnPlayerMoved();
             stepLimit--;
+            MovesRemainingIndicator.Instance.ShowMoveIndicator(stepLimit);
             if (LevelController.Instance.phase == LevelController.GamePhase.PHASE1)
             {
                 movesLog.Enqueue(movement);
