@@ -2302,7 +2302,7 @@ MonoBehaviour:
   boxTiles: []
   doorTiles: []
   startLocationTiles:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 2f63d48a3286b453ea5effec71342c40, type: 2}
 --- !u!4 &1411132347
 Transform:
   m_ObjectHideFlags: 0
