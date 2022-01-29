@@ -221,6 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f9dedb4467444a1892d9c56357dd47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winScreen: {fileID: 0}
+  loseScreen: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &306640883
 Transform:
   m_ObjectHideFlags: 0
@@ -7345,6 +7348,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepLimit: 100
+--- !u!4 &1082019846 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
+  m_PrefabInstance: {fileID: 1082019841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136211048
 GameObject:
   m_ObjectHideFlags: 0
@@ -17353,12 +17361,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849608615}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.49, y: 0.43, z: -5.52}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.15, z: -5.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1082019846}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &2072359087
 GameObject:
