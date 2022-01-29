@@ -79,6 +79,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f61fca10b3d844a42a480294c9a4a308, type: 2}
   - {fileID: 11400000, guid: ea63c3eaef78c4a3e93ae92fcf2e9df4, type: 2}
   - {fileID: 11400000, guid: 35457cc1459d44f78a88a9cfa12cdfaa, type: 2}
+  - {fileID: 11400000, guid: 6dfcb62294df74796bb0b3def35eab76, type: 2}
+  - {fileID: 11400000, guid: 9abad713fc5ad420ca067aae6b295429, type: 2}
+  - {fileID: 11400000, guid: 35de8daefa87441afaf275088cd0295d, type: 2}
+  - {fileID: 11400000, guid: f114592de47214511a4a6d90aea1d3e3, type: 2}
   floorTiles:
   - {fileID: 11400000, guid: 7f89bbfa482d449238205a12bf7a3f69, type: 2}
   - {fileID: 11400000, guid: ecd3803144ff94f29a41b0cc8f4c1792, type: 2}

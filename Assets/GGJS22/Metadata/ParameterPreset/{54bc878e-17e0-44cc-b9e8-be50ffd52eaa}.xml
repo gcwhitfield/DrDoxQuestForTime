@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{54bc878e-17e0-44cc-b9e8-be50ffd52eaa}">
+		<property name="name">
+			<value>HasCloneAppeared</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6a16d82c-3d00-4448-8790-73db7b878c29}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{cfedc349-02cb-4e85-8043-034dd9897b92}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{cfedc349-02cb-4e85-8043-034dd9897b92}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

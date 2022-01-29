@@ -40,7 +40,7 @@ public class Player : Singleton<Player>
                 movesLog.Enqueue(movement);
             }
             // the player loses the game if they run out of moves and they haven't reached the goal
-            if (stepLimit <= 0)
+            if (stepLimit < 0)
             {
                 LevelController.Instance.OnPlayerDied();
             }
@@ -50,7 +50,7 @@ public class Player : Singleton<Player>
     // Moves the player based on keyboard input. The player can only move if they have enough moves left
     void Update()
     {
-        if (stepLimit > 0)
+        if (stepLimit >= 0)
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
