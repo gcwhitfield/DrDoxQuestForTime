@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
 // location. 
 public class LevelController : Singleton<LevelController>
 {
+
+    private static FMOD.Studio.EventInstance Music; // init FMOD
+
     public enum GamePhase
     {
         PHASE1, // the player is trying to reach the goal
@@ -23,10 +26,17 @@ public class LevelController : Singleton<LevelController>
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject pauseMenu;
+    
+    public string musicPath; // choose what BGM track plays on this level
 
     // Start is called before the first frame update
     void Start()
     {
+        // more FMOD setup
+        Music = FMODUnity.RuntimeManager.CreateInstance(musicPath);
+        Music.start();
+        Music.release();
+    
         phase = GamePhase.PHASE1;
         Phase1Begin();
     }
@@ -47,6 +57,8 @@ public class LevelController : Singleton<LevelController>
     {
         Debug.Log("Beginning Phase 2");
         phase = GamePhase.PHASE2;
+        
+        Music.setParameterByName("hasCloneAppeared", 1);
 
         // enable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);

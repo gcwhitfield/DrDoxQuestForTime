@@ -956,6 +956,7 @@ MonoBehaviour:
   winScreen: {fileID: 1353495588}
   loseScreen: {fileID: 967642024}
   pauseMenu: {fileID: 0}
+  musicPath: event:/Music/Puzzle East
 --- !u!4 &987698384
 Transform:
   m_ObjectHideFlags: 0
@@ -1926,6 +1927,7 @@ GameObject:
   - component: {fileID: 1350946146}
   - component: {fileID: 1350946145}
   - component: {fileID: 1350946144}
+  - component: {fileID: 1350946147}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1998,6 +2000,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350946147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350946143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &1353495588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4120268404178853034, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
