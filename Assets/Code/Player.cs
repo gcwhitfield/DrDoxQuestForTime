@@ -17,19 +17,23 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            gameObject.transform.position = TilemapController.Instance.MovePlayer(gameObject.transform.position, new Vector3(0, 1, 0));
+            gameObject.transform.position = TilemapController.Instance.MovePlayer(
+                Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(0, 1, 0));
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            gameObject.transform.position = TilemapController.Instance.MovePlayer(gameObject.transform.position, new Vector3(-1, 0, 0));
+            gameObject.transform.position = TilemapController.Instance.MovePlayer(
+                Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(-1, 0, 0));
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            gameObject.transform.position = TilemapController.Instance.MovePlayer(gameObject.transform.position, new Vector3(0, -1, 0));
+            gameObject.transform.position = TilemapController.Instance.MovePlayer(
+                Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(0, -1, 0));
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            gameObject.transform.position = TilemapController.Instance.MovePlayer(gameObject.transform.position, new Vector3(1, 0, 0));
+            gameObject.transform.position = TilemapController.Instance.MovePlayer(
+                Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(1, 0, 0));
         }
     }
 }
