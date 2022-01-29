@@ -12,9 +12,10 @@ public class TilemapController : Singleton<TilemapController>
     public TileBase[] floorTiles;
     public TileBase[] goalTiles;
     public TileBase[] boxTiles;
-    public TileBase[] doorTiles;
-    public TileBase[] startLocationTiles;
+    public TileBase[] ladderTiles;
 
+    public TileBase switchClosed;
+    
     [System.Serializable]
     public enum BackgroundTileType
     {
@@ -26,8 +27,7 @@ public class TilemapController : Singleton<TilemapController>
     public enum ItemsTileType
     {
         BOX,
-        DOOR,
-        START_LOCATION,
+        LADDER,
         GOAL,
         NONE
     };
@@ -60,13 +60,9 @@ public class TilemapController : Singleton<TilemapController>
         {
             if (tile == t) return ItemsTileType.BOX;
         }
-        foreach (TileBase t in startLocationTiles)
+        foreach (TileBase t in ladderTiles)
         {
-            if (tile == t) return ItemsTileType.START_LOCATION;
-        }
-        foreach (TileBase t in doorTiles)
-        {
-            if (tile == t) return ItemsTileType.DOOR;
+            if (tile == t) return ItemsTileType.LADDER;
         }
 
         return ItemsTileType.NONE;
@@ -87,45 +83,45 @@ public class TilemapController : Singleton<TilemapController>
             return  Vector3.zero; // do not allow the player to move into or through walls
         } else
         {
-            // Given the player's location, activate the tile that the player is standing on.
+            // Given the player's location, the game will activate the tile that the player is standing on.
             // For example, if the player is standing on the goal, then the game logic for hitting the
-            // goal will execute. If the player is standing on a door, then the door will open/close, etc.
-            // If the player is moving towards a box, then it will move the box
+            // goal will execute. If the player is moving towards a box, then it will move the box
 
             // the player is moving into a box
             if (nextTileItem == ItemsTileType.BOX)
             {
                 Vector3 nextMovement = MovePlayer(playerLocation + movement, movement, isShadow);
-                // TODO: move the box
-                TileBase box = itemsTilemap.GetTile(Vector3Int.FloorToInt(playerLocation + movement));
-                itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation + movement, box);
-                itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation, null);
-                return nextMovement;
+                ItemsTileType nextNextTileItem = GetItemsTile (playerLocation + movement + Vector3Int.FloorToInt(nextMovement));
+                if (nextNextTileItem == ItemsTileType.NONE) // do not move the box if it will intersect with an item
+                {
+                    TileBase box = itemsTilemap.GetTile(Vector3Int.FloorToInt(playerLocation + movement));
+                    itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation + movement, box);
+                    itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation, null);
+                    return nextMovement;
+                } else
+                {
+                    return Vector3.zero;
+                }
             }
-
             // the player is moving into a goal
             if (nextTileItem == ItemsTileType.GOAL)
             {
                 if (!isShadow)
                 {
                     LevelController.Instance.OnGoalReached();
+                    itemsTilemap.SetTile(playerLocation + movement, switchClosed);
                 }
             }
-            // the player is moving into a door
-            else if (nextTileItem == ItemsTileType.DOOR)
-            {
-                // TODO: open or close the door
-            }
-            // the player is moving into the start location
-            else if (nextTileItem == ItemsTileType.START_LOCATION)
+            // the player is moving into a ladder
+            else if (nextTileItem == ItemsTileType.LADDER)
             {
                 if (!isShadow)
                 {
-                    LevelController.Instance.OnStartLocationReached();
+                    LevelController.Instance.OnLadderReached();
                 }
             }
 
-            return  movement;
+            return movement;
         } 
     }
 }
