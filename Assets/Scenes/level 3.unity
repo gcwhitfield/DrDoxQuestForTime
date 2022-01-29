@@ -1001,18 +1001,18 @@ Tilemap:
   - first: {x: -2, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 2, y: -3, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1031,28 +1031,32 @@ Tilemap:
   - first: {x: 3, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 1
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: dbdd068347b6149e8b4c0e1ffca7ad36, type: 2}
+    m_Data: {fileID: 11400000, guid: 3a323b9fb7d424073b8111c2422fdd43, type: 2}
   - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 508d308e203fa41799d94b6830499c60, type: 2}
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 2f63d48a3286b453ea5effec71342c40, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: a6b6ed62e1ceb4a8cb1cb729c459c4e5, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 0d04cead5466443ca873c897098e0300, type: 3}
+    m_Data: {fileID: 7733518535329509877, guid: d840c013ad166ec4e8214232db5ba25a, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 6a952bfbdda584e6496d0fede3bc370d, type: 3}
+    m_Data: {fileID: -4973337946501942013, guid: d840c013ad166ec4e8214232db5ba25a, type: 3}
   - m_RefCount: 2
-    m_Data: {fileID: 7482667652216324306, guid: ec92e43cb42574848a0114ab46d7acf2, type: 3}
+    m_Data: {fileID: 21300000, guid: 6a952bfbdda584e6496d0fede3bc370d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
     m_Data:
@@ -1073,10 +1077,10 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 2
-    m_Data: {r: 0.5754717, g: 0.23246104, b: 0.035288375, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 9.064e-42, g: 9.064e-42, b: 9.064e-42, a: 9.064e-42}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1142,7 +1146,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -1327,9 +1331,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dbdd068347b6149e8b4c0e1ffca7ad36, type: 2}
   boxTiles:
   - {fileID: 11400000, guid: a6b6ed62e1ceb4a8cb1cb729c459c4e5, type: 2}
-  doorTiles: []
-  startLocationTiles:
-  - {fileID: 11400000, guid: 2f63d48a3286b453ea5effec71342c40, type: 2}
+  ladderTiles: []
 --- !u!4 &621392323
 Transform:
   m_ObjectHideFlags: 0
@@ -2201,11 +2203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2258,4 +2260,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907289dac8f3f4a6892f109842aea7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepLimit: 8
+  stepLimitForwards: 13
+  stepLimitBackwards: 13
