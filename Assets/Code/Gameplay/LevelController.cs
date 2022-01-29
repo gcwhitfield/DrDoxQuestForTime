@@ -68,7 +68,7 @@ public class LevelController : Singleton<LevelController>
         }
     }
 
-    public void OnStartLocationReached()
+    public void OnLadderReached()
     {
         if (phase == GamePhase.PHASE2)
         {
