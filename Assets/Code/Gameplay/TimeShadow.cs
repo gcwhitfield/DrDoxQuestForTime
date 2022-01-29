@@ -11,10 +11,25 @@ public class TimeShadow : Singleton<TimeShadow>
     // Pop from queue, do move. This function will be called from LevelController.cs
     public void DoMove()
     {
-        Debug.Log("Moving shadow...");
-        Vector3Int move = moves.Dequeue();
-        Vector3 _movement = TilemapController.Instance.MovePlayer(
-            Vector3Int.FloorToInt(gameObject.transform.position), move);
-        gameObject.transform.position += _movement;
+        if (moves.Count > 0)
+		{
+            Vector3Int move = moves.Dequeue();
+            Vector3 _movement = TilemapController.Instance.MovePlayer(
+                Vector3Int.FloorToInt(gameObject.transform.position), move, true);
+            gameObject.transform.position += _movement;
+		}
+    }
+
+    // called when another collider overlaps with the collider that is currently attached to
+    // this gameobject
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            if (LevelController.Instance.phase == LevelController.GamePhase.PHASE2)
+			{
+                LevelController.Instance.OnPlayerDied();
+			}
+        }
     }
 }

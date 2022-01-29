@@ -5,19 +5,27 @@ using UnityEngine;
 public class Player : Singleton<Player>
 {
     public int stepLimit;
+	private int stepLimitSave;
 
     public Queue<Vector3Int> movesLog { get; private set; } // queue of player movements, which will be given to the
     // time shadow once gomeplay enters phase 2
 
+    // this function is called by LevelController when the player reaches the goal
+    public void Phase2Begin()
+	{
+		stepLimit = stepLimitSave;
+	}
+
     private void Start()
     {
-        movesLog = new Queue<Vector3Int>();    
+        movesLog = new Queue<Vector3Int>();
+		stepLimitSave = stepLimit;
     }
 
     void Move(Vector3Int movement)
     {
         Vector3 _movement = TilemapController.Instance.MovePlayer(
-            Vector3Int.FloorToInt(gameObject.transform.position), movement);
+            Vector3Int.FloorToInt(gameObject.transform.position), movement, false);
         gameObject.transform.position += _movement;
         if (_movement != Vector3.zero)
         {
@@ -27,6 +35,11 @@ public class Player : Singleton<Player>
             if (LevelController.Instance.phase == LevelController.GamePhase.PHASE1)
             {
                 movesLog.Enqueue(movement);
+            }
+            // the player loses the game if they run out of moves and they haven't reached the goal
+            if (stepLimit <= 0)
+            {
+                LevelController.Instance.OnPlayerDied();
             }
         }
     }
