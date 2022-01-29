@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Singleton<Player>
 {
     public int stepLimit;
 
-    // Start is called before the first frame update
-    void Start()
+    public Queue<Vector3Int> movesLog { get; private set; } // queue of player movements, which will be given to the
+    // time shadow once gomeplay enters phase 2
+
+    private void Start()
     {
-        
+        movesLog = new Queue<Vector3Int>();    
     }
 
     void Move(Vector3Int movement)
@@ -19,7 +21,12 @@ public class Player : MonoBehaviour
         gameObject.transform.position += _movement;
         if (_movement != Vector3.zero)
         {
+            LevelController.Instance.OnPlayerMoved();
             stepLimit--;
+            if (LevelController.Instance.phase == LevelController.GamePhase.PHASE1)
+            {
+                movesLog.Enqueue(movement);
+            }
         }
     }
     // Update is called once per frame
@@ -44,7 +51,6 @@ public class Player : MonoBehaviour
             {
                 Move(new Vector3Int(1, 0, 0));
             }
-            TilemapController.Instance.ActivateTile(Vector3Int.FloorToInt(gameObject.transform.position));
         }
     }
 }
