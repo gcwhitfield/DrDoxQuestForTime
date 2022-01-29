@@ -10,6 +10,15 @@ using UnityEngine;
 // location. 
 public class LevelController : Singleton<LevelController>
 {
+    public enum GamePhase
+    {
+        PHASE1, // the player is trying to reach the goal
+        PHASE2 // the player is trying to avoid their past self and reach the
+               // beginning of the level
+    };
+
+    public GamePhase phase { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +40,17 @@ public class LevelController : Singleton<LevelController>
         // TODO: play phase 2 begin sound?
         // TODO: 
     }
+
+    // called when the player reaches the goal
+    public void OnGoalReached()
+    {
+
+    }
+
+    // called when the player fails a puzzle
+    public void OnPlayerDied()
+    {
+
+    }
+
 }

@@ -12,6 +12,16 @@ public class Player : MonoBehaviour
         
     }
 
+    void Move(Vector3Int movement)
+    {
+        Vector3 _movement = TilemapController.Instance.MovePlayer(
+            Vector3Int.FloorToInt(gameObject.transform.position), movement);
+        gameObject.transform.position += _movement;
+        if (_movement != Vector3.zero)
+        {
+            stepLimit--;
+        }
+    }
     // Update is called once per frame
     // Moves the player based on keyboard input. The player can only move if they have enough moves left
     void Update()
@@ -20,28 +30,21 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                gameObject.transform.position = TilemapController.Instance.MovePlayer(
-                    Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(0, 1, 0));
-                stepLimit--;
+                Move(new Vector3Int(0, 1, 0));
             }
             if (Input.GetKeyDown(KeyCode.A))
             {
-                gameObject.transform.position = TilemapController.Instance.MovePlayer(
-                    Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(-1, 0, 0));
-                stepLimit--;
+                Move(new Vector3Int(-1, 0, 0));
             }
             if (Input.GetKeyDown(KeyCode.S))
             {
-                gameObject.transform.position = TilemapController.Instance.MovePlayer(
-                    Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(0, -1, 0));
-                stepLimit--;
+                Move(new Vector3Int(0, -1, 0));
             }
             if (Input.GetKeyDown(KeyCode.D))
             {
-                gameObject.transform.position = TilemapController.Instance.MovePlayer(
-                    Vector3Int.FloorToInt(gameObject.transform.position), new Vector3Int(1, 0, 0));
-                stepLimit--;
+                Move(new Vector3Int(1, 0, 0));
             }
+            TilemapController.Instance.ActivateTile(Vector3Int.FloorToInt(gameObject.transform.position));
         }
     }
 }
