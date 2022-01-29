@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Player : Singleton<Player>
 {
-    public int stepLimit;
-	private int stepLimitSave;
+    public int stepLimitForwards;
+	public int stepLimitBackwards;
+	private int stepLimit;
 
     public Queue<Vector3Int> movesLog { get; private set; } // queue of player movements, which will be given to the
     // time shadow once gomeplay enters phase 2
@@ -13,13 +14,13 @@ public class Player : Singleton<Player>
     // this function is called by LevelController when the player reaches the goal
     public void Phase2Begin()
 	{
-		stepLimit = stepLimitSave;
+		stepLimit = stepLimitBackwards;
 	}
 
     private void Start()
     {
         movesLog = new Queue<Vector3Int>();
-		stepLimitSave = stepLimit;
+		stepLimit = stepLimitForwards;
     }
 
     void Move(Vector3Int movement)

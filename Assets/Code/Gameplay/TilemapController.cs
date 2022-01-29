@@ -97,6 +97,9 @@ public class TilemapController : Singleton<TilemapController>
             {
                 Vector3 nextMovement = MovePlayer(playerLocation + movement, movement, isShadow);
                 // TODO: move the box
+                TileBase box = itemsTilemap.GetTile(Vector3Int.FloorToInt(playerLocation + movement));
+                itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation + movement, box);
+                itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation, null);
                 return nextMovement;
             }
 
