@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{511e34b0-1d55-415b-9643-9d73115f2612}">
+		<property name="assetPath">
+			<value>box move sfx/box move 02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.25321995464852609</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{760df7bd-f3ca-4a7a-9dd6-aa2f78192b0c}</destination>
+		</relationship>
+	</object>
+</objects>

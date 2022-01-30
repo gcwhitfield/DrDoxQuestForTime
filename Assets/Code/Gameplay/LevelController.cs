@@ -11,6 +11,9 @@ using UnityEngine.SceneManagement;
 // location. 
 public class LevelController : Singleton<LevelController>
 {
+
+    private static FMOD.Studio.EventInstance Music; // init FMOD
+
     public enum GamePhase
     {
         PHASE1, // the player is trying to reach the goal
@@ -23,10 +26,17 @@ public class LevelController : Singleton<LevelController>
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject pauseMenu;
+    
+    public string musicPath; // choose what BGM track plays on this level
 
     // Start is called before the first frame update
     void Start()
     {
+        // more FMOD setup
+        Music = FMODUnity.RuntimeManager.CreateInstance(musicPath);
+        Music.start();
+        Music.release();
+    
         phase = GamePhase.PHASE1;
         Phase1Begin();
     }
@@ -34,7 +44,6 @@ public class LevelController : Singleton<LevelController>
     // Called when the player starts the game
     void Phase1Begin()
     {
-        Debug.Log("Beginning Phase 1");
         // disable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(false);
         // TODO: play level begin sound?
@@ -45,14 +54,13 @@ public class LevelController : Singleton<LevelController>
     // where they must return to the beginning
     void Phase2Begin()
     {
-        Debug.Log("Beginning Phase 2");
         phase = GamePhase.PHASE2;
-
+        
         // enable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);
 
         Player.Instance.Phase2Begin();
-        // Done: stop playing phase 1 music, play phase 2 music
+        // TODO: stop playing phase 1 music, play phase 2 music
         // TODO: play phase 2 begin sound?
         // TODO: 
     }
@@ -62,17 +70,7 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE1)
         {
-<<<<<<< Updated upstream
-=======
             Music.setParameterByName("hasCloneAppeared", 1);
-            
-            // bad implementation
-            FMOD.Studio.EventInstance HatchUnlockedSFX;
-            HatchUnlockedSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Hatch Unlocked");
-            HatchUnlockedSFX.start();
-            HatchUnlockedSFX.release();
-            
->>>>>>> Stashed changes
             TimeShadow.Instance.moves = Player.Instance.movesLog;
             Debug.Log("The player has reached the goal.");
             Phase2Begin();
@@ -83,14 +81,8 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE2)
         {
+            Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("You win!");
-            
-            // bad implementation
-            FMOD.Studio.EventInstance SuccessSFX;
-            SuccessSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Success");
-            SuccessSFX.start();
-            SuccessSFX.release();
-            
             winScreen.SetActive(true);
         }
     }
@@ -99,19 +91,20 @@ public class LevelController : Singleton<LevelController>
     public void OnPlayerDied()
     {
         Debug.Log("You lose!");
-<<<<<<< Updated upstream
-=======
-        
         Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        
         Player.Instance.GetComponent<Animator>().SetTrigger("Die");
->>>>>>> Stashed changes
         loseScreen.SetActive(true);
     }
 
     // Called when the player moves in the game
     public void OnPlayerMoved()
     {
+        // bad implementation
+        FMOD.Studio.EventInstance PlayerMoveSFX;
+        PlayerMoveSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player Move");
+        PlayerMoveSFX.start();
+        PlayerMoveSFX.release();
+        
         if (phase == GamePhase.PHASE2)
         {
             // move the shadow
