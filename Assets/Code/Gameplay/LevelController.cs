@@ -88,7 +88,10 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE2)
         {
-            confetti.Play();
+            if (confetti)
+            {
+                confetti.Play();
+            }
             Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Invoke("YouWon",0.8f);
         }
