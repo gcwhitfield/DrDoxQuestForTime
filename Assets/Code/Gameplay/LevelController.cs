@@ -17,8 +17,9 @@ public class LevelController : Singleton<LevelController>
     public enum GamePhase
     {
         PHASE1, // the player is trying to reach the goal
-        PHASE2  // the player is trying to avoid their past self and reach the
+        PHASE2, // the player is trying to avoid their past self and reach the
                 // beginning of the level
+        GAME_OVER
     };
 
     public GamePhase phase { get; private set; }
@@ -94,6 +95,7 @@ public class LevelController : Singleton<LevelController>
             }
             Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Invoke("YouWon",0.8f);
+            phase = GamePhase.GAME_OVER;
         }
     }
 
@@ -111,6 +113,7 @@ public class LevelController : Singleton<LevelController>
         Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         Player.Instance.GetComponent<Animator>().SetTrigger("Die");
         loseScreen.SetActive(true);
+        phase = GamePhase.GAME_OVER;
     }
 
     // Called when the player moves in the game

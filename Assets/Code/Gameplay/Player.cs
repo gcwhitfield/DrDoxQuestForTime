@@ -50,23 +50,26 @@ public class Player : Singleton<Player>
     // Moves the player based on keyboard input. The player can only move if they have enough moves left
     void Update()
     {
-        if (stepLimit >= 0)
+        if (LevelController.Instance.phase != LevelController.GamePhase.GAME_OVER)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (stepLimit >= 0)
             {
-                Move(new Vector3Int(0, 1, 0));
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Move(new Vector3Int(-1, 0, 0));
-            }
-            if (Input.GetKeyDown(KeyCode.S))
-            {
-                Move(new Vector3Int(0, -1, 0));
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Move(new Vector3Int(1, 0, 0));
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    Move(new Vector3Int(0, 1, 0));
+                }
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    Move(new Vector3Int(-1, 0, 0));
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    Move(new Vector3Int(0, -1, 0));
+                }
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    Move(new Vector3Int(1, 0, 0));
+                }
             }
         }
     }
