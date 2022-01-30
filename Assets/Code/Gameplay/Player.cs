@@ -14,7 +14,6 @@ public class Player : Singleton<Player>
     // this function is called by LevelController when the player reaches the goal
     public void Phase2Begin()
 	{
-        Debug.Log("HEJAF");
 		stepLimit = stepLimitBackwards + 1;
         MovesRemainingIndicator.Instance.ShowMoveIndicator(stepLimit);
     }

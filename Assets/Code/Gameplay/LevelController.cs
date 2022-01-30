@@ -44,7 +44,6 @@ public class LevelController : Singleton<LevelController>
     // Called when the player starts the game
     void Phase1Begin()
     {
-        Debug.Log("Beginning Phase 1");
         // disable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(false);
         // TODO: play level begin sound?
@@ -55,7 +54,6 @@ public class LevelController : Singleton<LevelController>
     // where they must return to the beginning
     void Phase2Begin()
     {
-        Debug.Log("Beginning Phase 2");
         phase = GamePhase.PHASE2;
         
         // enable the time shadow
@@ -93,6 +91,7 @@ public class LevelController : Singleton<LevelController>
     public void OnPlayerDied()
     {
         Debug.Log("You lose!");
+        Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         loseScreen.SetActive(true);
     }
 
