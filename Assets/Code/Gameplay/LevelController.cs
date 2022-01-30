@@ -26,6 +26,7 @@ public class LevelController : Singleton<LevelController>
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject pauseMenu;
+    public InvertColorPostProcessEffect colorIversionEffect;
     public ParticleSystem confetti;
 
     public string musicPath; // choose what BGM track plays on this level
@@ -64,6 +65,11 @@ public class LevelController : Singleton<LevelController>
         // TODO: stop playing phase 1 music, play phase 2 music
         // TODO: play phase 2 begin sound?
         // TODO:
+
+        if (colorIversionEffect)
+        {
+            colorIversionEffect.PlayEffect();
+        }
     }
 
     // Called when the player reaches the goal
