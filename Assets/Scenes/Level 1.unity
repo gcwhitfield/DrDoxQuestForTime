@@ -1467,65 +1467,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 1863632116}
     m_Modifications:
     - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 822218703}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TransitionToScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneTransitionManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199518029227356127, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1624042453}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142265456440885993, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4120268404178853034, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
       propertyPath: m_Name
       value: WinScreen
@@ -1619,37 +1567,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 822218703}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TransitionToScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: SceneTransitionManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
 --- !u!1 &848905809 stripped
@@ -1735,7 +1655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7465376493562437889, guid: 1d9ac0045c00041d19301298d1defa6c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.960907
+      value: 0.9609375
       objectReference: {fileID: 0}
     - target: {fileID: 7465376493562437889, guid: 1d9ac0045c00041d19301298d1defa6c, type: 3}
       propertyPath: m_AnchoredPosition.y
