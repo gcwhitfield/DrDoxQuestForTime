@@ -99,6 +99,12 @@ public class LevelController : Singleton<LevelController>
     // Called when the player moves in the game
     public void OnPlayerMoved()
     {
+        // bad implementation
+        FMOD.Studio.EventInstance PlayerMoveSFX;
+        PlayerMoveSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player Move");
+        PlayerMoveSFX.start();
+        PlayerMoveSFX.release();
+        
         if (phase == GamePhase.PHASE2)
         {
             // move the shadow
