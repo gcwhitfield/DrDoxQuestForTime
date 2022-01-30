@@ -13,6 +13,8 @@ public class TilemapController : Singleton<TilemapController>
     public TileBase[] goalTiles;
     public TileBase[] boxTiles;
     public TileBase[] ladderTiles;
+    public TileBase[] ventEntryTiles;
+    public TileBase[] ventExitTiles;
 
     public TileBase switchClosed;
     
@@ -29,6 +31,8 @@ public class TilemapController : Singleton<TilemapController>
         BOX,
         LADDER,
         GOAL,
+        VENTENTRY, 
+        VENTEXIT,
         NONE
     };
 
@@ -63,6 +67,14 @@ public class TilemapController : Singleton<TilemapController>
         foreach (TileBase t in ladderTiles)
         {
             if (tile == t) return ItemsTileType.LADDER;
+        }
+        foreach (TileBase t in ventEntryTiles)
+        {
+            if (tile == t) return ItemsTileType.VENTENTRY;
+        }
+        foreach (TileBase t in ventExitTiles)
+        {
+            if (tile == t) return ItemsTileType.VENTEXIT;
         }
 
         return ItemsTileType.NONE;
@@ -103,6 +115,9 @@ public class TilemapController : Singleton<TilemapController>
                     return Vector3.zero;
                 }
             }
+            // the player is moving into a ventEntry
+            
+            // the player is moving into a ventExit
             // the player is moving into a goal
             if (nextTileItem == ItemsTileType.GOAL)
             {
