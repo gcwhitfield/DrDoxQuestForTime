@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 //
 // The gameplay is divided into two phases. In the first phase, the player is trying to
 // reach the goal. In the second phase, the player is trying to return back to the start
-// location. 
+// location.
 public class LevelController : Singleton<LevelController>
 {
 
@@ -26,7 +26,8 @@ public class LevelController : Singleton<LevelController>
     public GameObject winScreen;
     public GameObject loseScreen;
     public GameObject pauseMenu;
-    
+    public ParticleSystem confetti;
+
     public string musicPath; // choose what BGM track plays on this level
 
     // Start is called before the first frame update
@@ -36,7 +37,7 @@ public class LevelController : Singleton<LevelController>
         Music = FMODUnity.RuntimeManager.CreateInstance(musicPath);
         Music.start();
         Music.release();
-    
+
         phase = GamePhase.PHASE1;
         Phase1Begin();
     }
@@ -55,14 +56,14 @@ public class LevelController : Singleton<LevelController>
     void Phase2Begin()
     {
         phase = GamePhase.PHASE2;
-        
+
         // enable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);
 
         Player.Instance.Phase2Begin();
         // TODO: stop playing phase 1 music, play phase 2 music
         // TODO: play phase 2 begin sound?
-        // TODO: 
+        // TODO:
     }
 
     // Called when the player reaches the goal
@@ -81,11 +82,18 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE2)
         {
+            confetti.Play();
             Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Debug.Log("You win!");
-            winScreen.SetActive(true);
+            Invoke("YouWon",0.8f);
         }
     }
+
+    void YouWon()
+    {
+      Debug.Log("You win!");
+      winScreen.SetActive(true);
+    }
+
 
     // called when the player fails a puzzle
     public void OnPlayerDied()
@@ -104,7 +112,7 @@ public class LevelController : Singleton<LevelController>
         PlayerMoveSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player Move");
         PlayerMoveSFX.start();
         PlayerMoveSFX.release();
-        
+
         if (phase == GamePhase.PHASE2)
         {
             // move the shadow

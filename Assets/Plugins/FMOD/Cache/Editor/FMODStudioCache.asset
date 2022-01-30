@@ -158,8 +158,30 @@ MonoBehaviour:
   - {fileID: 2552541503315219323}
   StringsBanks:
   - {fileID: 4337041936930301375}
-  stringsBankWriteTime: 637791362880000000
+  stringsBankWriteTime: 637791379420000000
   cacheVersion: 8
+--- !u!114 &664019634691756788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &2552541503315219323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +197,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791362880000000
+  lastModified: 637791379420000000
   FileSizes:
   - Name: Desktop
     Value: 1304
@@ -195,7 +217,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791362880000000
+  lastModified: 637791379420000000
   FileSizes:
   - Name: Desktop
     Value: 1086
@@ -282,7 +304,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637791362890000000
+  lastModified: 637791379420000000
   FileSizes:
   - Name: Desktop
     Value: 1833120
@@ -302,7 +324,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637791362890000000
+  lastModified: 637791379420000000
   FileSizes:
   - Name: Desktop
     Value: 28704
@@ -394,7 +416,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4836155867872704663}
+  - {fileID: 664019634691756788}
   MinDistance: 0
   MaxDistance: 0
   Length: 112100
