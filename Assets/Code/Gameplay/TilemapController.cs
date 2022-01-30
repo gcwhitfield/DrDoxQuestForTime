@@ -18,6 +18,10 @@ public class TilemapController : Singleton<TilemapController>
 
     public TileBase switchClosed;
     
+
+    List<Vector3Int> ventsEntryPos;
+    List<Vector3Int> ventsExitPos;
+
     [System.Serializable]
     public enum BackgroundTileType
     {
@@ -80,6 +84,33 @@ public class TilemapController : Singleton<TilemapController>
         return ItemsTileType.NONE;
     }
 
+    
+    void Start()
+    {
+        // loop over items, find the position of vents
+        ventsEntryPos = new List<Vector3Int>();
+        ventsExitPos = new List<Vector3Int>();
+
+        for (int n = itemsTilemap.cellBounds.xMin; n < itemsTilemap.cellBounds.xMax; n++)
+        {
+            for (int p = itemsTilemap.cellBounds.yMin; p < itemsTilemap.cellBounds.yMax; p++)
+            {
+                Vector3Int pos = (new Vector3Int(n, p, 0));
+                ItemsTileType nextTileItem = GetItemsTile(pos);
+                if (nextTileItem == ItemsTileType.VENTENTRY)
+                {
+                    ventsEntryPos.Add(pos);
+                    Debug.Log("Find entry:"+ventsEntryPos[0]);
+                }
+                else if (nextTileItem == ItemsTileType.VENTEXIT)
+                {
+                    ventsExitPos.Add(pos);
+                    Debug.Log("Find exit"+ventsExitPos[0]);
+                }
+            }
+        }
+    }
+
 
     // Given a current player position, and a movement vector returns the direction
     // that the player moves to, given the constraints of the map. The player will
@@ -123,7 +154,17 @@ public class TilemapController : Singleton<TilemapController>
             }
             // the player is moving into a ventEntry
             
+            if (nextTileItem == ItemsTileType.VENTENTRY)
+            {
+                Vector3Int dist = ventsExitPos[0] - ventsEntryPos[0];
+                Vector3 nextMovement = new Vector3(dist.x,dist.y,dist.z) + movement;
+                return nextMovement;
+            }
             // the player is moving into a ventExit
+            if (nextTileItem == ItemsTileType.VENTEXIT)
+            { 
+
+            }
             // the player is moving into a goal
             if (nextTileItem == ItemsTileType.GOAL)
             {
@@ -146,3 +187,4 @@ public class TilemapController : Singleton<TilemapController>
         } 
     }
 }
+
