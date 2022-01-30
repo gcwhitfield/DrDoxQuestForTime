@@ -68,7 +68,7 @@ MonoBehaviour:
   - {fileID: 2552541503315219323}
   StringsBanks:
   - {fileID: 4337041936930301375}
-  stringsBankWriteTime: 637790776590000000
+  stringsBankWriteTime: 637790803422149364
   cacheVersion: 8
 --- !u!114 &2552541503315219323
 MonoBehaviour:
@@ -85,7 +85,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637790776590000000
+  lastModified: 637790746096157125
   FileSizes:
   - Name: Desktop
     Value: 1012
@@ -105,7 +105,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637790776590000000
+  lastModified: 637790803422149364
   FileSizes:
   - Name: Desktop
     Value: 912
@@ -125,10 +125,32 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637790776590000000
+  lastModified: 637790803422279741
   FileSizes:
   - Name: Desktop
     Value: 1832000
+  Exists: 1
+--- !u!114 &8445210603497125249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
   Exists: 1
 --- !u!114 &8614427968896056233
 MonoBehaviour:
@@ -173,7 +195,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3588182117316668961}
+  - {fileID: 8445210603497125249}
   MinDistance: 0
   MaxDistance: 0
   Length: 112100
