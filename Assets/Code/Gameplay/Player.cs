@@ -22,6 +22,7 @@ public class Player : Singleton<Player>
     {
         movesLog = new Queue<Vector3Int>();
 		stepLimit = stepLimitForwards;
+        MovesRemainingIndicator.Instance.ShowMoveIndicator(stepLimit);
     }
 
     void Move(Vector3Int movement)
