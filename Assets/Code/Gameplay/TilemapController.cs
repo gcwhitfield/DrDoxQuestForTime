@@ -17,7 +17,6 @@ public class TilemapController : Singleton<TilemapController>
     public TileBase[] ventExitTiles;
 
     public TileBase switchClosed;
-    
 
     List<Vector3Int> ventsEntryPos;
     List<Vector3Int> ventsExitPos;
@@ -153,7 +152,6 @@ public class TilemapController : Singleton<TilemapController>
                 }
             }
             // the player is moving into a ventEntry
-            
             if (nextTileItem == ItemsTileType.VENTENTRY)
             {
                 Vector3Int dist = ventsExitPos[0] - ventsEntryPos[0];
