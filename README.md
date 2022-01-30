@@ -1,5 +1,5 @@
-# Global-Game-Jam-S22
-Submission for global game jam. Play the game here: https://poshon.itch.io/drdoxs-quest-for-time
+# Dr.Dox's Quest for time - Submission for Global-Game-Jam-S22
+Submission for global game jam. Created within 48 hours. Play the game here: https://poshon.itch.io/drdoxs-quest-for-time
 
 ## Dr.Dox's Quest for time
 
