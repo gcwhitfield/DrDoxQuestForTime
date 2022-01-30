@@ -92,6 +92,7 @@ public class LevelController : Singleton<LevelController>
     {
         Debug.Log("You lose!");
         Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Player.Instance.GetComponent<Animator>().SetTrigger("Die");
         loseScreen.SetActive(true);
     }
 
