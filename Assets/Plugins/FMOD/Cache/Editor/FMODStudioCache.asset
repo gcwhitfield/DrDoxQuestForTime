@@ -217,7 +217,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791461550000000
+  lastModified: 637791463400000000
   FileSizes:
   - Name: Desktop
     Value: 1444
@@ -237,7 +237,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637791461560000000
+  lastModified: 637791463400000000
   FileSizes:
   - Name: Desktop
     Value: 328320
@@ -262,10 +262,32 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -287523551535999092}
+  - {fileID: -4313141991038831351}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4313141991038831351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Failure/isDeathByClone
+  m_EditorClassIdentifier: 
+  Name: isDeathByClone
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-2480849055483596655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +354,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7123827944455519982}
+  - {fileID: 4526808208717184272}
   MinDistance: 0
   MaxDistance: 0
   Length: 110500
@@ -374,7 +396,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791461550000000
+  lastModified: 637791463400000000
   FileSizes:
   - Name: Desktop
     Value: 1534
@@ -434,7 +456,7 @@ MonoBehaviour:
   - {fileID: -6244565048764902310}
   StringsBanks:
   - {fileID: -406852675481808711}
-  stringsBankWriteTime: 637791461550000000
+  stringsBankWriteTime: 637791463400000000
   cacheVersion: 8
 --- !u!114 &2796833893014942570
 MonoBehaviour:
@@ -459,6 +481,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4526808208717184272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &7265956725335094227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,7 +540,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637791461550000000
+  lastModified: 637791463400000000
   FileSizes:
   - Name: Desktop
     Value: 2066272
