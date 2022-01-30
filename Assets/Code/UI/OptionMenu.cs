@@ -1,19 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionMenu : MonoBehaviour
 {
-public Canvas Option ;
-public bool optionactive = false ;
-public void popup() {
-    if (optionactive == false) {
-        optionactive = true ;
-        Option.enabled = true ;
+    public Slider music;
+    public Slider SFX;
+
+    private void Start()
+    {
+        MusicVolumeSliderChanged(music.value);
+        SFXSliderVolumeChanged(SFX.value);
     }
-    else if (optionactive == true) {
-        optionactive = false ;
-        Option.enabled = false ;
+
+    public void MusicVolumeSliderChanged(float amt)
+    {
+        SetVolume("bus:/Music", amt);
     }
-}
+
+    public void SFXSliderVolumeChanged(float amt)
+    {
+        SetVolume("bus:/SFX", amt);
+    }
+
+    void SetVolume(string busPath, float amt)
+    {
+        if (amt < 0 || amt > 1)
+        {
+            return;
+        }
+        FMOD.Studio.Bus bus = FMODUnity.RuntimeManager.GetBus(busPath);
+        bus.setVolume(amt);
+    }
 }
