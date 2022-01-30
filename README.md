@@ -4,7 +4,9 @@ Submission for global game jam
 ## Dr.Dox's Quest for time
 
 ![Screenshot1](Screenshot1.png]
+
 ![Screenshot2](Screenshot2.png]
+
 Temporal rifts have opened up everywhere inside of Dr.Dox's laboratory! If the rifts aren't closed soon, then they will destroy the universe. Oh no!
 
 
