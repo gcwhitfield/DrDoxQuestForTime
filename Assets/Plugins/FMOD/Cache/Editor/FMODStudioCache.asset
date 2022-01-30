@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9136662117304667879
+--- !u!114 &-8701148757833653562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,19 +9,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Failure/isDeathByClone
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Success
   m_EditorClassIdentifier: 
-  Name: isDeathByClone
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 1
+  Path: event:/SFX/Success
+  guid: dd1ba423935d9742bfcfe3828dc15e8e
+  Banks:
+  - {fileID: -5037344083165722595}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8613435582030335283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Box Move
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Box Move
+  guid: 485d6df1b1bc1f4bb1966e8df4353b0d
+  Banks:
+  - {fileID: -5037344083165722595}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8603497585826624692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,8 +67,8 @@ MonoBehaviour:
     data2: 0
   Type: 1
   IsGlobal: 0
-  Exists: 1
---- !u!114 &-8083038493933735716
+  Exists: 0
+--- !u!114 &-7702937301988823065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,10 +78,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Button SFX/Button Hover
+  m_Name: event:/SFX/Button SFX/Button Press Big
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Button SFX/Button Hover
-  guid: 5c9c480879971b4fa28656617b1615a7
+  Path: event:/SFX/Button SFX/Button Press Big
+  guid: 0aad0f6e1c6d54458ce100994dedb738
+  Banks:
+  - {fileID: -5037344083165722595}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7595843377754222423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-7379938524124664515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hatch Unlocked
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hatch Unlocked
+  guid: 83573dc87083b5489c552bb6c8b35139
   Banks:
   - {fileID: -5037344083165722595}
   IsStream: 0
@@ -81,8 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/Player Move
   guid: 5985be3c0fd0fe43b58092ef7a685036
-  Banks:
-  - {fileID: -5037344083165722595}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -90,6 +158,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-7123827944455519982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-6497718565476409736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
+  m_EditorClassIdentifier: 
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-6244565048764902310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,7 +217,7 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637791463400000000
+  lastModified: 637791461550000000
   FileSizes:
   - Name: Desktop
     Value: 1444
@@ -125,12 +237,12 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637791463400000000
+  lastModified: 637791461560000000
   FileSizes:
   - Name: Desktop
     Value: 328320
   Exists: 1
---- !u!114 &-3106439034595518098
+--- !u!114 &-4388648526473628544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,20 +252,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Box Move
+  m_Name: event:/SFX/Failure
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Box Move
-  guid: 485d6df1b1bc1f4bb1966e8df4353b0d
+  Path: event:/SFX/Failure
+  guid: 6de2a6947fad8849ae7d070fc67c316b
   Banks:
   - {fileID: -5037344083165722595}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -287523551535999092}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-2571832456091025411
+--- !u!114 &-2480849055483596655
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,10 +276,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Hatch Unlocked
+  m_Name: event:/SFX/Button SFX/Button Hover
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Hatch Unlocked
-  guid: 83573dc87083b5489c552bb6c8b35139
+  Path: event:/SFX/Button SFX/Button Hover
+  guid: 5c9c480879971b4fa28656617b1615a7
   Banks:
   - {fileID: -5037344083165722595}
   IsStream: 0
@@ -199,28 +312,6 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 21788
---- !u!114 &-1444371571311573301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Puzzle East/HasCloneAppeared
-  m_EditorClassIdentifier: 
-  Name: HasCloneAppeared
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 1
 --- !u!114 &-1327644503901638923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,11 +332,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1444371571311573301}
+  - {fileID: -7123827944455519982}
   MinDistance: 0
   MaxDistance: 0
   Length: 110500
---- !u!114 &-896619907176053235
+--- !u!114 &-553046985157695018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,10 +346,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Button SFX/Button Press Big
+  m_Name: event:/SFX/Button SFX/Button Press Normal
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Button SFX/Button Press Big
-  guid: 0aad0f6e1c6d54458ce100994dedb738
+  Path: event:/SFX/Button SFX/Button Press Normal
+  guid: 9b076f5118ea8840afa04953e15352a4
   Banks:
   - {fileID: -5037344083165722595}
   IsStream: 0
@@ -283,10 +374,32 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637791463400000000
+  lastModified: 637791461550000000
   FileSizes:
   - Name: Desktop
     Value: 1534
+  Exists: 1
+--- !u!114 &-287523551535999092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Failure/isDeathByClone
+  m_EditorClassIdentifier: 
+  Name: isDeathByClone
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -308,22 +421,22 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -1327644503901638923}
   - {fileID: -1497631473539687793}
-  - {fileID: -7194623145416559152}
-  - {fileID: -896619907176053235}
-  - {fileID: -3106439034595518098}
-  - {fileID: -8083038493933735716}
-  - {fileID: 6098634808452021488}
-  - {fileID: -2571832456091025411}
-  - {fileID: 6398289132333282060}
-  - {fileID: 8255076370743379635}
+  - {fileID: -7702937301988823065}
+  - {fileID: -8613435582030335283}
+  - {fileID: 2796833893014942570}
+  - {fileID: -2480849055483596655}
+  - {fileID: -4388648526473628544}
+  - {fileID: -7379938524124664515}
+  - {fileID: -553046985157695018}
+  - {fileID: -8701148757833653562}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6244565048764902310}
   StringsBanks:
   - {fileID: -406852675481808711}
-  stringsBankWriteTime: 637791463400000000
+  stringsBankWriteTime: 637791461550000000
   cacheVersion: 8
---- !u!114 &6098634808452021488
+--- !u!114 &2796833893014942570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -333,34 +446,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Failure
+  m_Name: event:/SFX/Player Move
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Failure
-  guid: 6de2a6947fad8849ae7d070fc67c316b
-  Banks:
-  - {fileID: -5037344083165722595}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -9136662117304667879}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &6398289132333282060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Button SFX/Button Press Normal
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Button SFX/Button Press Normal
-  guid: 9b076f5118ea8840afa04953e15352a4
+  Path: event:/SFX/Player Move
+  guid: 5985be3c0fd0fe43b58092ef7a685036
   Banks:
   - {fileID: -5037344083165722595}
   IsStream: 0
@@ -407,12 +496,12 @@ MonoBehaviour:
   Path: Assets/GGJS22/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637791463400000000
+  lastModified: 637791461550000000
   FileSizes:
   - Name: Desktop
     Value: 2066272
   Exists: 1
---- !u!114 &8255076370743379635
+--- !u!114 &8162334810157235449
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,17 +510,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Success
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Puzzle East/HasCloneAppeared
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Success
-  guid: dd1ba423935d9742bfcfe3828dc15e8e
-  Banks:
-  - {fileID: -5037344083165722595}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
+  Name: HasCloneAppeared
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
