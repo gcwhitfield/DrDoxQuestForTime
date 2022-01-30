@@ -1,5 +1,5 @@
-# Dr.Dox's Quest for time - Submission for Global-Game-Jam-S22
-Submission for global game jam. Created within 48 hours. Play the game here: https://poshon.itch.io/drdoxs-quest-for-time
+# Dr.Dox's Quest for Time
+Submission for the 2022 Pittsburgh Global Game Jam. Created within 48 hours with Unity. Play the game here: https://poshon.itch.io/drdoxs-quest-for-time
 
 ## Dr.Dox's Quest for time
 
