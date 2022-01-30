@@ -1430,6 +1430,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2145591850}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TransitionToScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneTransitionManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246430760746292283, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22884e0c189f427c9fd40bed2b0da11, type: 3}
 --- !u!224 &1567516436 stripped
@@ -2002,3 +2034,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a22f1fbcb0dc24c129bac432ce61e29e, type: 3}
+--- !u!114 &2145591850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5091237166136629679, guid: a22f1fbcb0dc24c129bac432ce61e29e, type: 3}
+  m_PrefabInstance: {fileID: 2145591849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 867f092f6c1564d30834d6f3577b6d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
