@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // TimeShadow controls the movement for the player's shadow during
-// phase 2 of the gameplay sequence. 
+// phase 2 of the gameplay sequence.
 public class TimeShadow : Singleton<TimeShadow>
 {
     public Queue<Vector3Int> moves;
+    public ParticleSystem deathboom;
 
     // Pop from queue, do move. This function will be called from LevelController.cs
     public void DoMove()
@@ -26,10 +27,16 @@ public class TimeShadow : Singleton<TimeShadow>
     {
         if (collision.tag == "Player")
         {
-            if (LevelController.Instance.phase == LevelController.GamePhase.PHASE2)
-			{
-                LevelController.Instance.OnPlayerDied();
-			}
+          if(LevelController.Instance.phase == LevelController.GamePhase.PHASE2)
+          {
+            deathboom.Play();
+            Invoke("DeathScreen", 0.8f);
+          }
         }
+    }
+
+    void DeathScreen()
+    {
+        LevelController.Instance.OnPlayerDied();    
     }
 }
