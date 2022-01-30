@@ -81,6 +81,12 @@ public class LevelController : Singleton<LevelController>
             Music.setParameterByName("hasCloneAppeared", 1);
             TimeShadow.Instance.moves = Player.Instance.movesLog;
             Debug.Log("The player has reached the goal.");
+            
+            FMOD.Studio.EventInstance evt;
+            evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Hatch Unlocked");
+            evt.start();
+            evt.release();
+            
             Phase2Begin();
         }
     }
@@ -103,6 +109,10 @@ public class LevelController : Singleton<LevelController>
     {
       Debug.Log("You win!");
       winScreen.SetActive(true);
+      FMOD.Studio.EventInstance evt;
+        evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Success");
+        evt.start();
+        evt.release();
     }
 
 
