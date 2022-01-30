@@ -28,6 +28,13 @@ public class TimeShadow : Singleton<TimeShadow>
         {
             if (LevelController.Instance.phase == LevelController.GamePhase.PHASE2)
 			{
+                // bad implementation
+                FMOD.Studio.EventInstance FailureSFX;
+                FailureSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Failure");
+                FailureSFX.setParameterByName("isDeathByClone", 1);
+                FailureSFX.start();
+                FailureSFX.release();
+                
                 LevelController.Instance.OnPlayerDied();
 			}
         }

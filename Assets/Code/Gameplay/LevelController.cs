@@ -52,7 +52,7 @@ public class LevelController : Singleton<LevelController>
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);
 
         Player.Instance.Phase2Begin();
-        // TODO: stop playing phase 1 music, play phase 2 music
+        // Done: stop playing phase 1 music, play phase 2 music
         // TODO: play phase 2 begin sound?
         // TODO: 
     }
@@ -62,6 +62,17 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE1)
         {
+<<<<<<< Updated upstream
+=======
+            Music.setParameterByName("hasCloneAppeared", 1);
+            
+            // bad implementation
+            FMOD.Studio.EventInstance HatchUnlockedSFX;
+            HatchUnlockedSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Hatch Unlocked");
+            HatchUnlockedSFX.start();
+            HatchUnlockedSFX.release();
+            
+>>>>>>> Stashed changes
             TimeShadow.Instance.moves = Player.Instance.movesLog;
             Debug.Log("The player has reached the goal.");
             Phase2Begin();
@@ -73,6 +84,13 @@ public class LevelController : Singleton<LevelController>
         if (phase == GamePhase.PHASE2)
         {
             Debug.Log("You win!");
+            
+            // bad implementation
+            FMOD.Studio.EventInstance SuccessSFX;
+            SuccessSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Success");
+            SuccessSFX.start();
+            SuccessSFX.release();
+            
             winScreen.SetActive(true);
         }
     }
@@ -81,6 +99,13 @@ public class LevelController : Singleton<LevelController>
     public void OnPlayerDied()
     {
         Debug.Log("You lose!");
+<<<<<<< Updated upstream
+=======
+        
+        Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
+        Player.Instance.GetComponent<Animator>().SetTrigger("Die");
+>>>>>>> Stashed changes
         loseScreen.SetActive(true);
     }
 

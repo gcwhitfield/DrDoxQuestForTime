@@ -97,6 +97,13 @@ public class TilemapController : Singleton<TilemapController>
                     TileBase box = itemsTilemap.GetTile(Vector3Int.FloorToInt(playerLocation + movement));
                     itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation + movement, box);
                     itemsTilemap.SetTile(Vector3Int.FloorToInt(nextMovement) + playerLocation, null);
+                    
+                    // bad implementation
+                    FMOD.Studio.EventInstance BoxSFX;
+                    BoxSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Box Move");
+                    BoxSFX.start();
+                    BoxSFX.release();
+                    
                     return nextMovement;
                 } else
                 {

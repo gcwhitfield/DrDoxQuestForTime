@@ -59,7 +59,11 @@
 			<destination>{cc8c19a2-607a-4831-9f24-21304d6a2b87}</destination>
 		</relationship>
 		<relationship name="output">
+<<<<<<< Updated upstream
 			<destination>{365bb5ed-2113-494c-b833-ffada9e47d69}</destination>
+=======
+			<destination>{e6bcb1a9-e9ed-4086-a439-cc4351833d4e}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{b50fbf23-c7db-4b50-857a-40e6d809cb3f}" />
@@ -92,6 +96,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{52587225-8798-4746-8f76-c8ccc74a911d}">
+		<relationship name="modulators">
+			<destination>{3d43deb2-323f-434e-9ee1-55d7f22576fc}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{cf12a198-fcd9-4a9f-9f95-22262d8d7be8}</destination>
 		</relationship>
@@ -217,10 +224,10 @@
 	</object>
 	<object class="TransitionRegion" id="{9cb18a9e-ea8d-4d24-b595-353112be40e8}">
 		<property name="position">
-			<value>6.5</value>
+			<value>0</value>
 		</property>
 		<property name="length">
-			<value>38.400000000000013</value>
+			<value>44.90000000000002</value>
 		</property>
 		<property name="quantizationInterval">
 			<value>2</value>
@@ -268,6 +275,26 @@
 		<relationship name="markerTrack">
 			<destination>{3af635f9-e64e-48cf-b99f-930b8ea70029}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{3d43deb2-323f-434e-9ee1-55d7f22576fc}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="attackTime">
+			<value>0</value>
+		</property>
+		<property name="releaseTime">
+			<value>320</value>
+		</property>
+		<property name="releaseShape">
+			<value>0.550516367</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{cf12a198-fcd9-4a9f-9f95-22262d8d7be8}">
 		<relationship name="effects">

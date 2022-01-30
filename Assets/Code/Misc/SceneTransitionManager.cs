@@ -15,6 +15,12 @@ public class SceneTransitionManager : Singleton<SceneTransitionManager>
 
     public void TransitionToScene(string sceneName)
     {
+        // very bad implementation
+        FMOD.Studio.EventInstance ButtonPressBig;
+        ButtonPressBig = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Button SFX/Button Press Big");
+        ButtonPressBig.start();
+        ButtonPressBig.release();
+        
         StartCoroutine("PlaySceneTransitionAnimation", sceneName);
     }
 
