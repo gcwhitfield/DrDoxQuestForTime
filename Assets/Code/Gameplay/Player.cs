@@ -42,6 +42,10 @@ public class Player : Singleton<Player>
             // the player loses the game if they run out of moves and they haven't reached the goal
            if (stepLimit < 0)
             {
+                FMOD.Studio.EventInstance evt;
+                evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Failure");
+                evt.start();
+                evt.release();
                 LevelController.Instance.OnPlayerDied();
             }
         }

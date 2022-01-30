@@ -30,7 +30,13 @@ public class TimeShadow : Singleton<TimeShadow>
           if(LevelController.Instance.phase == LevelController.GamePhase.PHASE2)
           {
             deathboom.Play();
+            
             Invoke("DeathScreen", 0.8f);
+            
+            FMOD.Studio.EventInstance evt;
+            evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Clone Failure");
+            evt.start();
+            evt.release();
           }
         }
     }
