@@ -7,7 +7,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f8433108208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7f842a194608 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -30,7 +30,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 06', format=5, channels=2, frequency=48000, lengthbytes=2528, lengthpcm=9543, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.705109.
@@ -46,7 +46,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 02', format=5, channels=2, frequency=48000, lengthbytes=2944, lengthpcm=10657, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.285248.
@@ -62,7 +62,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 03', format=5, channels=2, frequency=48000, lengthbytes=3520, lengthpcm=11442, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.361908.
@@ -78,7 +78,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 05', format=5, channels=2, frequency=48000, lengthbytes=3200, lengthpcm=10612, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.287140.
@@ -94,7 +94,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 01', format=5, channels=2, frequency=48000, lengthbytes=2784, lengthpcm=10054, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.368652.
@@ -110,7 +110,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx special', format=5, channels=2, frequency=48000, lengthbytes=2432, lengthpcm=6947, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.861023.
@@ -126,7 +126,7 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 07', format=5, channels=2, frequency=48000, lengthbytes=2368, lengthpcm=10377, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.782410.
@@ -142,29 +142,29 @@
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x164603d1d
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x164603d4a
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x164603de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8433c8de28
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f842ead2ac8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='move sfx 04', format=5, channels=2, frequency=48000, lengthbytes=2304, lengthpcm=9817, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.525879.
-[LOG] SoundI::release                          : main loop quiet v01 (0x7f842eacb578)
-[LOG] SoundI::release                          :     main loop quiet v01 (0x7f8433cf1178)
-[LOG] SoundI::release                          :     main loop quiet v01 (0x7f8433cf1308)
-[LOG] SoundI::release                          :  (0x7f842e6f5578)
-[LOG] SoundI::release                          :     move sfx 01 (0x7f842face858)
-[LOG] SoundI::release                          :  (0x7f842f997b08)
-[LOG] SoundI::release                          :     move sfx 02 (0x7f842ec076b8)
-[LOG] SoundI::release                          :  (0x7f842e64e078)
-[LOG] SoundI::release                          :     move sfx 03 (0x7f842ec42308)
-[LOG] SoundI::release                          :  (0x7f842e67c9c8)
-[LOG] SoundI::release                          :     move sfx 04 (0x7f842fa9f508)
-[LOG] SoundI::release                          :  (0x7f842e6fb7d8)
-[LOG] SoundI::release                          :     move sfx 05 (0x7f842fad7248)
-[LOG] SoundI::release                          :  (0x7f842f928e98)
-[LOG] SoundI::release                          :     move sfx 06 (0x7f842ecd7608)
-[LOG] SoundI::release                          :  (0x7f842e712088)
-[LOG] SoundI::release                          :     move sfx 07 (0x7f842faa5888)
-[LOG] SoundI::release                          :  (0x7f842e6068f8)
-[LOG] SoundI::release                          :     move sfx special (0x7f842fac88b8)
+[LOG] SoundI::release                          : main loop quiet v01 (0x7f842e4be628)
+[LOG] SoundI::release                          :     main loop quiet v01 (0x7f8431996818)
+[LOG] SoundI::release                          :     main loop quiet v01 (0x7f84319969a8)
+[LOG] SoundI::release                          :  (0x7f842ea3b988)
+[LOG] SoundI::release                          :     move sfx 01 (0x7f842ea2dc58)
+[LOG] SoundI::release                          :  (0x7f842ea3de78)
+[LOG] SoundI::release                          :     move sfx 02 (0x7f842ea3dfe8)
+[LOG] SoundI::release                          :  (0x7f842ea3e178)
+[LOG] SoundI::release                          :     move sfx 03 (0x7f842ea45d98)
+[LOG] SoundI::release                          :  (0x7f842ea2c058)
+[LOG] SoundI::release                          :     move sfx 04 (0x7f842ea2b238)
+[LOG] SoundI::release                          :  (0x7f842ea45f28)
+[LOG] SoundI::release                          :     move sfx 05 (0x7f842ead3d28)
+[LOG] SoundI::release                          :  (0x7f842ea44708)
+[LOG] SoundI::release                          :     move sfx 06 (0x7f842eab6198)
+[LOG] SoundI::release                          :  (0x7f842ea2bd58)
+[LOG] SoundI::release                          :     move sfx 07 (0x7f842ea2bec8)
+[LOG] SoundI::release                          :  (0x7f842ea2cb68)
+[LOG] SoundI::release                          :     move sfx special (0x7f842ea2ccd8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

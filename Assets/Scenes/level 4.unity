@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: stepLimitBackwards
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 3269014166778220484, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7061316848071857032, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -692,11 +696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.56
+      value: 1.99
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8695776405689893604, guid: 7d49917de6acd480ebf04f0c91fa11e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1374,7 +1378,7 @@ MonoBehaviour:
   winScreen: {fileID: 1687165622}
   loseScreen: {fileID: 123128823}
   pauseMenu: {fileID: 0}
-  musicPath: 
+  musicPath: event:/Music/Puzzle East
 --- !u!4 &1054791949
 Transform:
   m_ObjectHideFlags: 0
@@ -1838,11 +1842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 634076865803742677, guid: 0a70de3a3182e4fd1a613acd692ab7b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.56
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 634076865803742677, guid: 0a70de3a3182e4fd1a613acd692ab7b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 634076865803742677, guid: 0a70de3a3182e4fd1a613acd692ab7b7, type: 3}
       propertyPath: m_LocalRotation.w
