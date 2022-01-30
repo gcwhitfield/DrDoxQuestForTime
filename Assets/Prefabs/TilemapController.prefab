@@ -104,4 +104,8 @@ MonoBehaviour:
   ladderTiles:
   - {fileID: 11400000, guid: ac06f8af6fb6c4f0fa47c99478b1a274, type: 2}
   - {fileID: 11400000, guid: 3a323b9fb7d424073b8111c2422fdd43, type: 2}
+  ventEntryTiles:
+  - {fileID: 11400000, guid: eeded61c5ac3e4eb28566ea81220ece0, type: 2}
+  ventExitTiles:
+  - {fileID: 11400000, guid: 532783c12a4d0417bb1bd99e395e3714, type: 2}
   switchClosed: {fileID: 11400000, guid: d1fffed31df6d47759b4281cd07418f7, type: 2}
