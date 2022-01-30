@@ -100,6 +100,12 @@ public class LevelController : Singleton<LevelController>
                 confetti.Play();
             }
             Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            
+            FMOD.Studio.EventInstance evt;
+            evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Success");
+            evt.start();
+            evt.release();
+            
             Invoke("YouWon",0.8f);
             phase = GamePhase.GAME_OVER;
         }
@@ -109,10 +115,6 @@ public class LevelController : Singleton<LevelController>
     {
       Debug.Log("You win!");
       winScreen.SetActive(true);
-      FMOD.Studio.EventInstance evt;
-        evt = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Success");
-        evt.start();
-        evt.release();
     }
 
 
