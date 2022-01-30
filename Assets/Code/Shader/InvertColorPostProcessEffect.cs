@@ -7,6 +7,7 @@ public class InvertColorPostProcessEffect : MonoBehaviour
 {
     public Material colorInversionMaterial;
     public float interpolationAmt;
+    public float intensity;
     public AnimationCurve effectCurve;
     [Range(0.1f, 5)]
     public float effectLength;
@@ -32,6 +33,7 @@ public class InvertColorPostProcessEffect : MonoBehaviour
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         colorInversionMaterial.SetFloat("_InterpolationAmt", interpolationAmt);
+        colorInversionMaterial.SetFloat("_Intensity", intensity);
         Graphics.Blit(source, destination, colorInversionMaterial);
     }
 }

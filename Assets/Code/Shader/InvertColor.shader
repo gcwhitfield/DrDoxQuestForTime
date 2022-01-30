@@ -4,6 +4,7 @@ Shader "Unlit/InvertColor"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _InterpolationAmt ("InterpolationAmount", float) = 0.0
+        _Intensity ("Intensity", float) = 1
     }
     SubShader
     {
@@ -36,6 +37,7 @@ Shader "Unlit/InvertColor"
             sampler2D _MainTex;
             float4 _MainTex_ST;
             float _InterpolationAmt;
+            float _Intensity;
 
             v2f vert (appdata v)
             {
@@ -55,11 +57,14 @@ Shader "Unlit/InvertColor"
                 float circleRadius = _InterpolationAmt;
                 float x = i.uv.x - 0.5;
                 float y = i.uv.y - 0.5;
+                
                 if (sqrt(x*x + y*y) > circleRadius)
                 {
                     return col;
                 } else {
-                    return (1 - _InterpolationAmt) * col + (1 - col) * _InterpolationAmt;
+                    //return (1 - _InterpolationAmt) * col + (1 - col) * _InterpolationAmt;
+
+                    return float4(col.r + _Intensity * 0.2, col.g - _Intensity * 0.2, col.b + _Intensity, col.a);
                 }
             }
             ENDCG
