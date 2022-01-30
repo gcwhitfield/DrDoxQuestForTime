@@ -44,7 +44,6 @@ public class LevelController : Singleton<LevelController>
     // Called when the player starts the game
     void Phase1Begin()
     {
-        Debug.Log("Beginning Phase 1");
         // disable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(false);
         // TODO: play level begin sound?
@@ -55,11 +54,8 @@ public class LevelController : Singleton<LevelController>
     // where they must return to the beginning
     void Phase2Begin()
     {
-        Debug.Log("Beginning Phase 2");
         phase = GamePhase.PHASE2;
         
-        Music.setParameterByName("hasCloneAppeared", 1);
-
         // enable the time shadow
         TimeShadow.Instance.transform.Find("Art").gameObject.SetActive(true);
 
@@ -74,6 +70,7 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE1)
         {
+            Music.setParameterByName("hasCloneAppeared", 1);
             TimeShadow.Instance.moves = Player.Instance.movesLog;
             Debug.Log("The player has reached the goal.");
             Phase2Begin();
@@ -84,6 +81,7 @@ public class LevelController : Singleton<LevelController>
     {
         if (phase == GamePhase.PHASE2)
         {
+            Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("You win!");
             winScreen.SetActive(true);
         }
@@ -93,12 +91,20 @@ public class LevelController : Singleton<LevelController>
     public void OnPlayerDied()
     {
         Debug.Log("You lose!");
+        Music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        Player.Instance.GetComponent<Animator>().SetTrigger("Die");
         loseScreen.SetActive(true);
     }
 
     // Called when the player moves in the game
     public void OnPlayerMoved()
     {
+        // bad implementation
+        FMOD.Studio.EventInstance PlayerMoveSFX;
+        PlayerMoveSFX = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player Move");
+        PlayerMoveSFX.start();
+        PlayerMoveSFX.release();
+        
         if (phase == GamePhase.PHASE2)
         {
             // move the shadow

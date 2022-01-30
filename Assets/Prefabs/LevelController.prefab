@@ -46,3 +46,4 @@ MonoBehaviour:
   winScreen: {fileID: 0}
   loseScreen: {fileID: 0}
   pauseMenu: {fileID: 0}
+  musicPath: event:/Music/Puzzle East

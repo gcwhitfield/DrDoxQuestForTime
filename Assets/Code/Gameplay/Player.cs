@@ -9,12 +9,11 @@ public class Player : Singleton<Player>
 	private int stepLimit;
 
     public Queue<Vector3Int> movesLog { get; private set; } // queue of player movements, which will be given to the
-    // time shadow once gomeplay enters phase 2
+    // time shadow once gameplay enters phase 2
 
     // this function is called by LevelController when the player reaches the goal
     public void Phase2Begin()
 	{
-        Debug.Log("HEJAF");
 		stepLimit = stepLimitBackwards + 1;
         MovesRemainingIndicator.Instance.ShowMoveIndicator(stepLimit);
     }
@@ -23,6 +22,7 @@ public class Player : Singleton<Player>
     {
         movesLog = new Queue<Vector3Int>();
 		stepLimit = stepLimitForwards;
+        MovesRemainingIndicator.Instance.ShowMoveIndicator(stepLimit);
     }
 
     void Move(Vector3Int movement)
@@ -40,7 +40,7 @@ public class Player : Singleton<Player>
                 movesLog.Enqueue(movement);
             }
             // the player loses the game if they run out of moves and they haven't reached the goal
-            if (stepLimit < 0)
+           if (stepLimit < 0)
             {
                 LevelController.Instance.OnPlayerDied();
             }
